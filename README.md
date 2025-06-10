@@ -2,8 +2,8 @@
 
 This repository contains the complete code for a Delta robot control system, distributed across two platforms:
 
-- **ESP32**: Runs local motor control using PWM and PID, with real-time encoder feedback.
-- **Jetson Nano with ROS Melodic**: Runs ROS nodes for perception, trajectory generation, PID control, and inverse kinematics computation.
+- **ESP32**: Runs local motor control using PWM and PID, with encoder feedback.
+- **Jetson Nano with ROS Melodic**: Runs ROS nodes for visual processing, trajectory generation, PID control, and inverse kinematics computation.
 
 ## 🔧 Structure
 
@@ -14,7 +14,7 @@ Contains the firmware uploaded to both ESP32 boards:
 - `PID.h`: PID controller implementation.
 
 ### `/jetson_nano_ros/`
-Contains all ROS nodes and tools:
+Contains all ROS melodic nodes and tools:
 - `IK.py`: Inverse kinematics node.
 - `control.py`: ROS-based PID controller for platform motion.
 - `reference.py`: Reference trajectory generator (circle, square, figure-8, etc.).
