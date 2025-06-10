@@ -5,8 +5,6 @@ This repository contains the complete code for a Delta robot control system, dis
 - **ESP32**: Runs local motor control using PWM and PID, with encoder feedback.
 - **Jetson Nano with ROS Melodic**: Runs ROS nodes for visual processing, trajectory generation, PID control, and inverse kinematics computation.
 
-![delta_robot](images/delta_robot.jpeg)
-
 ## 🔧 Structure
 
 ### `/esp32/`
@@ -58,3 +56,6 @@ Supported trajectories include:
 - Circle
 - Square
 - Hexagon
+
+
+![delta_robot](images/delta_robot.jpeg)
