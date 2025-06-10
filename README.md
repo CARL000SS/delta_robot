@@ -5,7 +5,7 @@ This repository contains the complete code for a Delta robot control system, dis
 - **ESP32**: Runs local motor control using PWM and PID, with encoder feedback.
 - **Jetson Nano with ROS Melodic**: Runs ROS nodes for visual processing, trajectory generation, PID control, and inverse kinematics computation.
 
-![delta_robot](images/delta_robot.png)
+![delta_robot](images/delta_robot.jpeg)
 
 ## 🔧 Structure
 
@@ -25,6 +25,11 @@ Contains all ROS melodic nodes and tools:
 - `UDP.py`: Sends data over UDP (optional).
 - `launch.launch`: ROS launch file.
 
+## 🖼️ System Diagram
+Below is a system diagram of the platform architecture:
+![ros](images/ros.png)
+
+
 ## ▶️ How to Run the System
 
 ### ESP32
@@ -37,6 +42,7 @@ cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 roslaunch jetson_nano_ros launch.launch
+```
 
 ## 📸 Camera Setup
 - Overhead camera (index 0): Detects (x, y) position of the ball.
