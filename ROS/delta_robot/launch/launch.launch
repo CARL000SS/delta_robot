@@ -1,0 +1,26 @@
+<launch>
+
+    <arg name="show_image" default="false"/>
+    <arg name="udp" default="true"/>
+
+
+    <node pkg="delta_robot" type="camera.py" name="camera" output="screen">
+        <param name="show_image" value="$(arg show_image)"/>
+    </node>
+
+    <node pkg="delta_robot" type="reference.py" name="reference" output="screen">
+    </node>
+
+    <node pkg="delta_robot" type="control.py" name="control" output="screen">
+    </node>
+	
+    <node pkg="delta_robot" type="IK.py" name="IK" output="screen">
+    </node>
+	
+    <node pkg="delta_robot" type="uart.py" name="UART" output="screen">
+    </node>
+
+    <node pkg="delta_robot" type="UDP.py" name="UDP" output="screen" if="$(arg udp)">
+    </node>
+
+</launch>
